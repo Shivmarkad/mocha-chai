@@ -37,10 +37,7 @@ describe('---Check should---',function(){
     })
 })
 
-
 // ***************** expect *************
-
-
 
 describe('---Expect Check ---',function(){
     let userName = 'Shiv';
@@ -59,6 +56,9 @@ describe('---Expect Check ---',function(){
     })
 
     it('Expect check property of object--',function(){
-        expect(details).haveOwnProperty('age')
+        expect(details).to.have.property('age').to.be.a('number')
+    })
+    it('Expect check property of object--',function(){
+        expect(details).to.have.all.keys('age','role')
     })
 })
