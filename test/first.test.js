@@ -3,6 +3,7 @@ const chai = require('chai')
 const assert = chai.assert
 const should = chai.should()
 const expect = chai.expect
+const { calculate } = require('../src/index.js')
 
 // ***************** assert *************
 
@@ -60,5 +61,8 @@ describe('---Expect Check ---',function(){
     })
     it('Expect check property of object--',function(){
         expect(details).to.have.all.keys('age','role')
+    })
+    it('Expect check for imported module --',function(){
+        expect(calculate(25,5)).to.be.equal(7)
     })
 })
